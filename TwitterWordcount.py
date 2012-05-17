@@ -61,7 +61,8 @@ class TweetGetter:
         """
         Append the user's last tweets to our internal list of tweets, up to the maximum number allowed by twitter,
             descending, starting at tweet with id /last_tweet_id/.
-        Returns the ID of the last tweet grabbed, so that callers know where to start at next time.
+        Returns number of tweets actually grabbed, as well as the ID of the last tweet grabbed, so that callers
+            know where to start at next time.
         """
         values = {
             'screen_name': self._username,
@@ -103,7 +104,7 @@ class TweetGetter:
         return words
     
     def wordsByFrequency(self):
-        """ Print a list of words used in the user's last /limit/ statuses,
+        """ Print a list of words used in the user's last /_limit/ statuses,
             sorted by frequency descending.
         """
         unsorted_word_dict = self._uniqueWordsInStatuses()
