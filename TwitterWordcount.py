@@ -108,4 +108,4 @@ class TweetGetter:
         """
         unsorted_word_dict = self._uniqueWordsInStatuses()
         for k, v in sorted(unsorted_word_dict.iteritems(), key=lambda (k,v): (v,k),reverse=True):
-            print v
+            print k
