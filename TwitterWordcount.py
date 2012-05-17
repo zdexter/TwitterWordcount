@@ -12,7 +12,7 @@ class WordCounter:
         self._words = words
     def _addToDict(self, item, myDict):
         """
-        Append a word to the dictionary passed in (if seen for the firs time)
+        Append a word to the dictionary passed in (if seen for the first time)
             or increases the counter for that word (if already seen).
         """
         if item in myDict:
@@ -40,7 +40,7 @@ class TweetGetter:
     _resourceURL = "http://api.twitter.com/1/statuses/user_timeline.format"
     def __init__(self, username, limit=1000):
         self._username = username
-        self._limit = 1000
+        self._limit = limit
         self._tweets = []
         
         # See how many tweets the user has, so we don't try to retrieve more than that later on.
