@@ -1,4 +1,4 @@
-# Coding question for Square
+# Twitter Wordcount library.
 __author__ = 'Zach Dexter'
 
 import urllib
